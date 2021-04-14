@@ -1,6 +1,6 @@
 var mymap = L.map('map',{
     center: [0,100],
-    zoom: 6,
+    zoom: 5,
 });
 
 var wmsLayer = L.tileLayer.wms('https://www.gmrt.org/services/mapserver/wms_merc?',{
@@ -167,6 +167,7 @@ function group_button (id) {
 
 legend = L.control.Legend({
     position: "bottomleft",
+    collapsed: true,
     legends: [{
 	label: "Depth ≤ 12 km",
 	type: "rectangle",
@@ -213,9 +214,4 @@ legend = L.control.Legend({
 	fillColor: colorScale[8],
 	fillOpacity: 1.0	
     }]
-}).addTo(mymap);	    
-				    
-
-				    
-
-				   
+}).addTo(mymap);
